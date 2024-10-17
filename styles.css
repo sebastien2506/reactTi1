@@ -8,18 +8,17 @@
 }
 
 
-#panier-container:hover {
-    box-shadow: 0 0 25px rgba(248, 2, 2, 0.15);
-}
+
 
 #panier {
     background-color: #ffffff;
     border-radius: 6px;
     padding: 1rem;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    top: 8rem;
+    box-shadow: 0 0 10px rgba(240, 2, 2, 0.1);
+    top: 10rem; /* Augmentation de cette valeur */
     position: sticky;
     z-index: 1;
+    margin-right: 20px; /* Ajout de cette ligne pour décaler le panier */
 }
 
 #panier h2 {
@@ -268,4 +267,87 @@ input, textarea {
 
 .btn:active {
     transform: scale(0.95);
+}
+
+/* Footer Gaming */
+.footer-gaming {
+    background-color: #1a1a2e;
+    color: #ffffff;
+    padding: 40px 0 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 0 20px;
+    min-width: 200px;
+}
+
+.footer-section h3 {
+    color: #00ff00;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #00ff00;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: #ffffff;
+    color: #1a1a2e;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: #00ff00;
+    color: #ffffff;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #333333;
+}
+
+.footer-bottom p {
+    font-size: 0.9em;
 }
