@@ -69,6 +69,20 @@
       "prix": 699.99,
       "description": "Moniteur gaming 27\" 4K HDR avec un taux de rafraîchissement de 144Hz",
       "image": "https://images.unsplash.com/photo-1527219525722-f9767a7f2884?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=375&q=80"
+    },
+    {
+      "id": 11,
+      "nom": "Carte graphique NVIDIA RTX 3080",
+      "prix": 799.99,
+      "description": "Carte graphique haut de gamme pour le gaming 4K et le ray tracing",
+      "image": "https://images.unsplash.com/photo-1591488320449-011701bb6704?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=375&q=80"
+    },
+    {
+      "id": 12,
+      "nom": "Microphone streaming Blue Yeti",
+      "prix": 129.99,
+      "description": "Microphone USB professionnel pour le streaming et les podcasts",
+      "image": "https://images.unsplash.com/photo-1589003077984-894e133dabab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=375&q=80"
     }
   ]
 }

@@ -13,7 +13,7 @@
     border-radius: 6px;
     padding: 1rem;
     box-shadow: 0 0 10px rgba(240, 2, 2, 0.1);
-    top: 10rem; /* Augmentation de cette valeur */
+    top: 3rem; /* Augmentation de cette valeur */
     position: sticky;
     z-index: 1;
     margin-right: 20px; /* Ajout de cette ligne pour décaler le panier */
@@ -177,14 +177,9 @@ section {
     background-color: #45a049;
 }
 
-#panier-container {
-    position: sticky;
-    top: 1rem;
-    z-index: 100;
-}
 
 #panier, #confirmation {
-    width: 300px;
+    width: 500px;
 }
 
 form {
