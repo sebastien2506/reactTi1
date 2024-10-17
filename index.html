@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Site E-commerce Gaming</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header-gaming">
+        <div class="logo-container">
+            <img src="logo-gaming.png" alt="Logo Gaming" class="logo-gaming">
+        </div>
+        <h1 class="titre-anime">Mon Site E-commerce Gaming</h1>
+        <nav class="menu-gaming">
+        </nav>
+    </header>
+
+    <div class="container">
+        <main>
+            <section id="catalogue">
+                
+            </section>
+        </main>
+
+        <aside id="panier-container">
+            <div id="panier">
+                <h2>Panier</h2>
+                <div id="panier-contenu"></div>
+                <hr>
+                <p>Total : <span id="panier-total">0</span> €</p>
+                <button id="confirmer-panier">Confirmer le panier</button>
+            </div>
+        </aside>
+    </div>
+
+    <section id="confirmation">
+        <form id="formulaire-commande">
+        </form>
+    </section>
+</div>
+
+<div id="modal" class="modal">
+    <div class="modal-contenu">
+        <span class="fermer">&times;</span>
+        <p>Votre commande a été confirmée !</p>
+    </div>
+</div>
+
+
+
+<!-- Ajoutez ceci juste avant la fermeture de la balise </body> -->
+<div id="modal-confirmation" class="modal">
+    <div class="modal-contenu">
+        <h2>Confirmation de commande</h2>
+        <p>Total de votre commande : <span id="modal-prix-total"></span> €</p>
+        <div class="boutons-confirmation">
+            <button id="bouton-confirmer-commande" class="btn btn-confirmer">Confirmer et passer au formulaire</button>
+            <button class="btn btn-annuler fermer">Annuler</button>
+        </div>
+    </div>
+</div>
+<footer class="bg-dark text-light py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 mb-4 mb-md-0">
+                <h5 class="mb-3">À propos</h5>
+                <p class="small">Votre destination ultime pour tous vos besoins gaming. Nous proposons les derniers jeux, consoles et accessoires.</p>
+            </div>
+            <div class="col-md-3 mb-4 mb-md-0">
+                <h5 class="mb-3">Liens rapides</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-light text-decoration-none">Accueil</a></li>
+                    <li><a href="#" class="text-light text-decoration-none">Catalogue</a></li>
+                    <li><a href="#" class="text-light text-decoration-none">Promotions</a></li>
+                    <li><a href="#" class="text-light text-decoration-none">Support</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 mb-4 mb-md-0">
+                <h5 class="mb-3">Nous contacter</h5>
+                <p class="small mb-1">Email : contact@gaming-store.com</p>
+                <p class="small">Téléphone : 01 23 45 67 89</p>
+            </div>
+            <div class="col-md-3">
+                <h5 class="mb-3">Suivez-nous</h5>
+                <div class="d-flex">
+                    <a href="#" class="text-light me-3"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-light me-3"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-light me-3"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-light"><i class="fab fa-twitch"></i></a>
+                </div>
+            </div>
+        </div>
+        <hr class="my-4 bg-secondary">
+        <div class="text-center small">
+            <p class="mb-0">&copy; 2023 Mon Site E-commerce Gaming. Tous droits réservés.</p>
+        </div>
+    </div>
+</footer>
+
+
+<script src="script.js"></script>
+</body>
+</html>

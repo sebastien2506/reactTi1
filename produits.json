@@ -1,0 +1,74 @@
+{
+  "produits": [
+    {
+      "id": 1,
+      "nom": "PlayStation 5",
+      "prix": 499.99,
+      "description": "Console de jeu next-gen avec des graphismes 4K et un SSD ultra-rapide",
+      "image": "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+    },
+    {
+      "id": 2,
+      "nom": "Xbox Series X",
+      "prix": 499.99,
+      "description": "La console Xbox la plus puissante avec des performances 4K",
+      "image": "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+    },
+    {
+      "id": 3,
+      "nom": "Nintendo Switch OLED",
+      "prix": 349.99,
+      "description": "Console portable avec un écran OLED vibrant de 7 pouces",
+      "image": "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+    },
+    {
+      "id": 4,
+      "nom": "Casque VR Oculus Quest 2",
+      "prix": 299.99,
+      "description": "Casque de réalité virtuelle autonome avec contrôleurs Touch",
+      "image": "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+    },
+    {
+      "id": 5,
+      "nom": "Manette PS5 DualSense",
+      "prix": 69.99,
+      "description": "Manette sans fil avec retour haptique et gâchettes adaptatives",
+      "image": "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+    },
+    {
+      "id": 6,
+      "nom": "Clavier gaming Razer",
+      "prix": 129.99,
+      "description": "Clavier mécanique RGB avec switches optiques pour des performances optimales",
+      "image": "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+    },
+    {
+      "id": 7,
+      "nom": "Souris gaming Logitech G502",
+      "prix": 79.99,
+      "description": "Souris gaming haute performance avec capteur HERO 25K",
+      "image": "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+    },
+    {
+      "id": 8,
+      "nom": "Casque gaming HyperX Cloud II",
+      "prix": 99.99,
+      "description": "Casque gaming avec son surround 7.1 et microphone détachable",
+      "image": "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+    },
+    {
+      "id": 9,
+      "nom": "Chaise gaming SecretLab",
+      "prix": 399.99,
+      "description": "Chaise gaming ergonomique avec support lombaire ajustable",
+      "image": "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+    },
+    {
+      "id": 10,
+      "nom": "Moniteur gaming ASUS ROG",
+      "prix": 699.99,
+      "description": "Moniteur gaming 27\" 4K HDR avec un taux de rafraîchissement de 144Hz",
+      "image": "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+    }
+  ]
+}
