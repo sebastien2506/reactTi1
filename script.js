@@ -166,3 +166,4 @@ function confirmerPanier() {
     console.log("Panier stocké :", JSON.parse(localStorage.getItem('panier')));
     window.location.href = 'formulaire.html';
 }
+
