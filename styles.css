@@ -349,3 +349,38 @@ input, textarea {
 .footer-bottom p {
     font-size: 0.9em;
 }
+
+.gaming-banner {
+  position: relative;
+  width: 100%; /* Prend toute la largeur de l'écran */
+  background-color: #000; /* Couleur de fond pour les espaces vides */
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.gaming-banner-content {
+  position: relative;
+  width: 50%; /* L'image et le texte occupent 50% de la largeur */
+  max-width: 100%; /* Limite la largeur maximale */
+  margin: 0 auto; /* Centre le contenu */
+}
+
+.gaming-banner img {
+  width: 100%; /* L'image occupe toute la largeur de son conteneur */
+  height: auto; /* Maintient les proportions de l'image */
+  display: block;
+}
+
+.gaming-banner h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+  font-size: 2em;
+  text-align: center;
+  width: 90%;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
