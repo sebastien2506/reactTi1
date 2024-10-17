@@ -67,14 +67,20 @@ document.addEventListener('DOMContentLoaded', () => {
     mettreAJourPanier();
 });
 
+document.getElementById('confirmer-panier').addEventListener('click', function() {
 
+    const panier = JSON.parse(localStorage.getItem('panier')) || [];
+    
+    localStorage.setItem('panierConfirme', JSON.stringify(panier));
+    
+    window.location.href = 'formulaire.html';
+});
 
 function calculerTotal() {
     return panier.reduce((total, item) => total + item.prix * item.quantite, 0);
 }
 
 
-// Modifiez la fonction mettreAJourPanier pour utiliser calculerTotal
 function mettreAJourPanier() {
     const contenuPanier = document.getElementById('panier-contenu');
     const totalPanier = document.getElementById('panier-total');
@@ -136,3 +142,6 @@ function ouvrirPanier() {
         panierElement.style.display = 'block';
     }
 }
+
+
+
