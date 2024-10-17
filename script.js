@@ -35,6 +35,7 @@ function afficherProduits() {
     });
 }
 
+
 // Fonction pour ajouter un produit au panier
 function ajouterAuPanier(id) {
     const produit = produits.find(p => p.id === id);
