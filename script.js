@@ -46,7 +46,7 @@ function ajouterAuPanier(id) {
         panier.push({ ...produit, quantite: 1 });
     }
     mettreAJourPanier();
-    ouvrirPanier();
+    ouvrirPanier(); // Assurez-vous que cette fonction existe
     mettreAJourNombreArticles();
     afficherPanier();
 }
@@ -95,12 +95,3 @@ function mettreAJourPanier() {
     totalPanier.textContent = calculerTotal().toFixed(2);
     mettreAJourNombreArticles();
 }
-
-
-
-
-
-
-
-
-
