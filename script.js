@@ -1,6 +1,7 @@
 // Variables globales
 let produits = [];
 const panier = [];
+let panierOuvert = false;
 
 // Fonction pour charger les produits depuis le fichier JSON
 function chargerProduits() {
@@ -82,12 +83,16 @@ function mettreAJourPanier() {
     
     panier.forEach(item => {
         const element = document.createElement('div');
+        element.className = 'panier-item';
         element.innerHTML = `
-            <span>${item.nom}</span>
-            <span>x${item.quantite}</span>
-            <span>${(item.prix * item.quantite).toFixed(2)} €</span>
-            <button onclick="retirerUnArticle(${item.id})">-</button>
-            <button onclick="supprimerDuPanier(${item.id})">🗑️</button>
+            <span class="item-nom">${item.nom}</span>
+            <div class="item-quantite">
+                <button class="btn-quantite" onclick="retirerUnArticle(${item.id})"><i class="fas fa-chevron-down"></i></button>
+                <span>${item.quantite}</span>
+                <button class="btn-quantite" onclick="ajouterAuPanier(${item.id})"><i class="fas fa-chevron-up"></i></button>
+            </div>
+            <span class="item-prix">${(item.prix * item.quantite).toFixed(2)} €</span>
+            <button class="btn-supprimer" onclick="supprimerDuPanier(${item.id})"><i class="fas fa-trash"></i></button>
         `;
         contenuPanier.appendChild(element);
     });
@@ -119,7 +124,15 @@ function retirerUnArticle(id) {
 
 function ouvrirPanier() {
     const panierElement = document.getElementById('panier');
-    if (panierElement) {
+    if (panierElement && !panierOuvert) {
+        panierElement.style.display = 'block';
+        panierElement.style.transform = 'translateX(100%)';
+        panierElement.style.transition = 'transform 0.9s ease-out';
+        setTimeout(() => {
+            panierElement.style.transform = 'translateX(0)';
+        }, 10);
+        panierOuvert = true;
+    } else if (panierElement) {
         panierElement.style.display = 'block';
     }
 }

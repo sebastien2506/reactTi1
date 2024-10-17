@@ -379,3 +379,71 @@ input, textarea {
   padding: 0 10px;
   box-sizing: border-box;
 }
+
+.panier-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #2703f5;
+}
+
+.item-nom {
+    flex: 1;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.item-quantite {
+    display: flex;
+    align-items: center;
+    margin: 20px 60px;
+
+}
+
+.btn-quantite {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0 15px;
+}
+
+.item-prix {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.btn-supprimer {
+    background: none;
+    border: none;
+    color: #ff0000;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.catalogue-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .catalogue-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 992px) {
+    .catalogue-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1200px) {
+    .catalogue-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
