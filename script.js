@@ -1,14 +1,17 @@
-// Variables globales
+
 let produits = [];
 const panier = [];
 let panierOuvert = false;
 
-// Fonction pour charger les produits depuis le fichier JSON
+
 function chargerProduits() {
     fetch('produits.json')
         .then(response => response.json())
         .then(data => {
-            produits = data.produits;
+            produits = data.produits.map(produit => ({
+                ...produit,
+                stock: Math.floor(Math.random() * 20) + 1 
+            }));
             afficherProduits();
         })
         .catch(error => console.error('Erreur lors du chargement des produits:', error));
@@ -17,7 +20,7 @@ function chargerProduits() {
 
 function afficherProduits() {
     const catalogue = document.getElementById('catalogue');
-    catalogue.innerHTML = ''; // Vider le catalogue avant d'ajouter les produits
+    catalogue.innerHTML = ''; 
 
     produits.forEach(produit => {
         const element = document.createElement('div');
@@ -30,26 +33,32 @@ function afficherProduits() {
             <h3>${produit.nom}</h3>
             <p>${descriptionCourte}</p>
             <p>Prix : ${produit.prix} €</p>
-            <button onclick="ajouterAuPanier(${produit.id})">Ajouter au panier</button>
+            <p>Stock disponible : ${produit.stock}</p>
+            <button onclick="ajouterAuPanier(${produit.id})" ${produit.stock === 0 ? 'disabled' : ''}>
+                ${produit.stock === 0 ? 'Rupture de stock' : 'Ajouter au panier'}
+            </button>
         `;
         catalogue.appendChild(element);
     });
 }
 
 
-// Fonction pour ajouter un produit au panier
+
 function ajouterAuPanier(id) {
     const produit = produits.find(p => p.id === id);
-    const item = panier.find(i => i.id === id);
-    if (item) {
-        item.quantite++;
-    } else {
-        panier.push({ ...produit, quantite: 1 });
+    if (produit.stock > 0) {
+        const item = panier.find(i => i.id === id);
+        if (item) {
+            item.quantite++;
+        } else {
+            panier.push({ ...produit, quantite: 1 });
+        }
+        produit.stock--;
+        mettreAJourPanier();
+        ouvrirPanier();
+        mettreAJourNombreArticles();
+        afficherProduits(); // Mettre à jour l'affichage des produits pour refléter le nouveau stock
     }
-    mettreAJourPanier();
-    ouvrirPanier(); // Assurez-vous que cette fonction existe
-    mettreAJourNombreArticles();
-    afficherPanier();
 }
 
 // Fonction pour supprimer un produit du panier
@@ -68,11 +77,12 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.getElementById('confirmer-panier').addEventListener('click', function() {
+    if (panier.length === 0) {
+        afficherMessageErreur("Votre panier est vide. Veuillez ajouter des articles avant de confirmer.");
+        return;
+    }
 
-    const panier = JSON.parse(localStorage.getItem('panier')) || [];
-    
     localStorage.setItem('panierConfirme', JSON.stringify(panier));
-    
     window.location.href = 'formulaire.html';
 });
 
@@ -143,5 +153,25 @@ function ouvrirPanier() {
     }
 }
 
-
-
+function afficherMessageErreur(message) {
+    const panierElement = document.getElementById('panier');
+    const messageErreur = document.createElement('div');
+    messageErreur.className = 'message-erreur';
+    messageErreur.innerHTML = `<strong style="color: red;">${message}</strong>`;
+    
+    
+    const ancienMessage = panierElement.querySelector('.message-erreur');
+    if (ancienMessage) {
+        ancienMessage.remove();
+    }
+    
+    panierElement.insertBefore(messageErreur, panierElement.firstChild);
+    
+    
+    setTimeout(() => {
+        messageErreur.style.opacity = '0';
+        setTimeout(() => {
+            messageErreur.remove();
+        }, 300);
+    }, 3000);
+}

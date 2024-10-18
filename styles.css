@@ -17,7 +17,6 @@
     position: sticky;
     z-index: 1;
     margin: 50px;
-    margin-right: 200px; 
 }
 
 #panier h2 {
@@ -135,7 +134,7 @@ section {
 }
 
 .produit {
-    border: 1px solid #ddd;
+    border: 10px solid #ddd;
     padding: 1rem;
     width: 250px;
     display: flex;
