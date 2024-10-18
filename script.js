@@ -1,4 +1,3 @@
-
 let produits = [];
 const panier = [];
 let panierOuvert = false;
@@ -33,7 +32,9 @@ function afficherProduits() {
             <h3>${produit.nom}</h3>
             <p>${descriptionCourte}</p>
             <p>Prix : ${produit.prix} €</p>
-            <p>Stock disponible : ${produit.stock}</p>
+            <p style="${produit.stock === 0 ? 'color: red; font-weight: bold;' : ''}">
+                ${produit.stock === 0 ? 'Stock épuisé' : `Stock disponible : ${produit.stock}`}
+            </p>
             <button onclick="ajouterAuPanier(${produit.id})" ${produit.stock === 0 ? 'disabled' : ''}>
                 ${produit.stock === 0 ? 'Rupture de stock' : 'Ajouter au panier'}
             </button>
@@ -57,7 +58,7 @@ function ajouterAuPanier(id) {
         mettreAJourPanier();
         ouvrirPanier();
         mettreAJourNombreArticles();
-        afficherProduits(); // Mettre à jour l'affichage des produits pour refléter le nouveau stock
+        afficherProduits(); 
     }
 }
 
